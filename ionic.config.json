@@ -1,0 +1,8 @@
+{
+  "name": "Revisao_Ryan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "innerHTMLTemplatesEnabled": true
+}

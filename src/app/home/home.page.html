@@ -1,0 +1,61 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar >
+    <ion-title>
+      Revisão
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Revisão</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+      <ion-list>
+        <h1 style="text-align: center;">Formulário:</h1>
+        <ion-item>
+          <ion-input [(ngModel)]="nome" label="Nome:"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-input [(ngModel)]="telefone" label="Telefone:" type="number" ></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-input [(ngModel)]="curso" label="Curso"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="horario" label="Horário das aulas" type="number" ></ion-input>
+        </ion-item>
+    
+      </ion-list>
+      <br>
+      <br>
+      
+      <ion-button shape="round" color="dark" size="medium" (click)="Apresentar()">Apresentar</ion-button>
+    
+      <br>
+      <br>
+      <ion-list lines="full" *ngIf="mostrarLinhas">
+        <ion-item>
+          <ion-icon name="person"> </ion-icon>
+          <ion-label [innerHTML]="Nome"></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="call"></ion-icon>
+          <ion-label [innerHTML]="Telefone"> </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="newspaper"></ion-icon>
+          <ion-label [innerHTML]="Curso"></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="time"></ion-icon>
+          <ion-label [innerHTML]="Horario"></ion-label>
+        </ion-item>
+      </ion-list>
+</ion-content>
